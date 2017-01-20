@@ -17,8 +17,8 @@ class Dropdown extends Component {
     formName: `${this.props.name}`,
     formType: `${this.props.type}`,
     formQuestion: `${this.props.payload.label}`,
-    formAnswer: `${this.props.payload.options[0]}`,
-    selectedValue: `${this.props.payload.options[0]}`,
+    formAnswer: `${this.props.payload.options[1]}`,
+    selectedValue: `${this.props.payload.options[1]}`,
   }
 
   constructor(props) {
