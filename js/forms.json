@@ -1,238 +1,706 @@
-{
-  "page1": {
-    "title": "Basic Information",
-    "fields": [
-      {
-        "name": "txtName",
-        "type": "textfield",
-        "payload": {
-          "label": "First Name",
-          "placeholder": "your name"
-        }
-      },
-      {
-        "name": "txtLastname",
-        "type": "textfield",
-        "payload": {
-          "label": "Last Name",
-          "placeholder": "your last name"
-        }
-      },
-      {
-        "name": "pickerBirthDate",
-        "type": "date-picker",
-        "payload": {
-          "label": "Birthdate"
-        }
-      },
-      {
-        "name": "txtStreet",
-        "type": "textfield",
-        "payload": {
-          "label": "Street",
-          "placeholder": "street..."
-        }
-      },
-      {
-        "name": "txtCity",
-        "type": "textfield",
-        "payload": {
-          "label": "City",
-          "placeholder": "city..."
-        }
-      },
-      {
-        "name": "pickCountry",
-        "type": "picker",
-        "payload": {
-          "label": "Country",
-          "options": [
-            "THAILAND",
-            "JAPAN",
-            "SINGAPORE"
-          ]
-        }
-      },
-    ]
-  },
-  "page2": {
-    "title": "Employment Status",
-    "fields": [
-      {
-        "name": "employmentDetail",
-        "type": "input-group",
-        "payload": {
-          "title": "Employment Detail",
-          "subTitle": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,",
-          "forms": [
-            {
-              "name": "bussinessTypePicker",
-              "type": "picker",
-              "payload": {
-                "label": "Type of Business",
-                "options": [
-                  "Agriculture",
-                  "Minning",
-                  "Financial"
-                ]
-              }
-            },
-            {
-              "name": "txtName2",
-              "type": "textfield",
-              "payload": {
-                "label": "Name",
-                "placeholder": "your name"
-              }
-            },
-            {
-              "name": "txtEmail",
-              "type": "textfield",
-              "payload": {
-                "label": "Email",
-                "placeholder": "email address"
-              }
-            },
-            {
-              "name": "mc4",
-              "type": "multiple-choice",
-              "payload": {
-                "question": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium ?",
-                "options": [
-                  "cat",
-                  "dog",
-                  "pug",
-                  "tiger",
-                  "fish"
-                ]
-              }
+    {
+      "page1": {
+        "title": "Basic Information",
+        "fields": [
+          {
+            "name": "txtName",
+            "type": "textfield",
+            "payload": {
+              "label": "Name",
+              "placeholder": "Your name"
             }
-          ]
-        }
+          },
+          {
+            "name": "txtLastName",
+            "type": "textfield",
+            "payload": {
+              "label": "Last Name",
+              "placeholder": "Your last name"
+            }
+          },
+          {
+            "name": "pickerGender",
+            "type": "picker",
+            "payload": {
+              "label": "Gender",
+              "options": [
+                "Male",
+                "Female"
+              ]
+            }
+          },
+          {
+            "name": "txtIdCardNumber",
+            "type": "textfield",
+            "payload": {
+              "label": "National ID Card Number",
+              "placeholder": "Your ID card number"
+            }
+          },
+          {
+            "name": "pickerDateOfBirth",
+            "type": "date-picker",
+            "payload": {
+              "label": "Date of Birth",
+              "options": [
+                "A",
+                "B",
+                "C"
+              ]
+            }
+          },
+          {
+            "name": "pickerNationality",
+            "type": "picker",
+            "payload": {
+              "label": "Nationality",
+              "options": [
+                "Afghan",
+                "Albanian",
+                "Algerian",
+                "American",
+                "Andorran",
+                "Angolan",
+                "Antiguans",
+                "Argentinean",
+                "Armenian",
+                "Australian",
+                "Austrian",
+                "Azerbaijani",
+                "Bahamian",
+                "Bahraini",
+                "Bangladeshi",
+                "Barbadian",
+                "Barbudans",
+                "Batswana",
+                "Belarusian",
+                "Belgian",
+                "Belizean",
+                "Beninese",
+                "Bhutanese",
+                "Bolivian",
+                "Bosnian",
+                "Brazilian",
+                "British",
+                "Bruneian",
+                "Bulgarian",
+                "Burkinabe",
+                "Burmese",
+                "Burundian",
+                "Cambodian",
+                "Cameroonian",
+                "Canadian",
+                "Cape Verdean",
+                "Central African",
+                "Chadian",
+                "Chilean",
+                "Chinese",
+                "Colombian",
+                "Comoran",
+                "Congolese",
+                "Costa Rican",
+                "Croatian",
+                "Cuban",
+                "Cypriot",
+                "Czech",
+                "Danish",
+                "Djibouti",
+                "Dominican",
+                "Dutch",
+                "East Timorese",
+                "Ecuadorean",
+                "Egyptian",
+                "Emirian",
+                "Equatorial Guinean",
+                "Eritrean",
+                "Estonian",
+                "Ethiopian",
+                "Fijian",
+                "Filipino",
+                "Finnish",
+                "French",
+                "Gabonese",
+                "Gambian",
+                "Georgian",
+                "German",
+                "Ghanaian",
+                "Greek",
+                "Grenadian",
+                "Guatemalan",
+                "Guinea-Bissauan",
+                "Guinean",
+                "Guyanese",
+                "Haitian",
+                "Herzegovinian",
+                "Honduran",
+                "Hungarian",
+                "I-Kiribati",
+                "Icelander",
+                "Indian",
+                "Indonesian",
+                "Iranian",
+                "Iraqi",
+                "Irish",
+                "Israeli",
+                "Italian",
+                "Ivorian",
+                "Jamaican",
+                "Japanese",
+                "Jordanian",
+                "Kazakhstani",
+                "Kenyan",
+                "Kittian and Nevisian",
+                "Kuwaiti",
+                "Kyrgyz",
+                "Laotian",
+                "Latvian",
+                "Lebanese",
+                "Liberian",
+                "Libyan",
+                "Liechtensteiner",
+                "Lithuanian",
+                "Luxembourger",
+                "Macedonian",
+                "Malagasy",
+                "Malawian",
+                "Malaysian",
+                "Maldivan",
+                "Malian",
+                "Maltese",
+                "Marshallese",
+                "Mauritanian",
+                "Mauritian",
+                "Mexican",
+                "Micronesian",
+                "Moldovan",
+                "Monacan",
+                "Mongolian",
+                "Moroccan",
+                "Mosotho",
+                "Motswana",
+                "Mozambican",
+                "Namibian",
+                "Nauruan",
+                "Nepalese",
+                "New Zealander",
+                "Nicaraguan",
+                "Nigerian",
+                "Nigerien",
+                "North Korean",
+                "Northern Irish",
+                "Norwegian",
+                "Omani",
+                "Pakistani",
+                "Palauan",
+                "Panamanian",
+                "Papua New Guinean",
+                "Paraguayan",
+                "Peruvian",
+                "Polish",
+                "Portuguese",
+                "Qatari",
+                "Romanian",
+                "Russian",
+                "Rwandan",
+                "Saint Lucian",
+                "Salvadoran",
+                "Samoan",
+                "San Marinese",
+                "Sao Tomean",
+                "Saudi",
+                "Scottish",
+                "Senegalese",
+                "Serbian",
+                "Seychellois",
+                "Sierra Leonean",
+                "Singaporean",
+                "Slovakian",
+                "Slovenian",
+                "Solomon Islander",
+                "Somali",
+                "South African",
+                "South Korean",
+                "Spanish",
+                "Sri Lankan",
+                "Sudanese",
+                "Surinamer",
+                "Swazi",
+                "Swedish",
+                "Swiss",
+                "Syrian",
+                "Taiwanese",
+                "Tajik",
+                "Tanzanian",
+                "Thai",
+                "Togolese",
+                "Tongan",
+                "Trinidadian or Tobagonian",
+                "Tunisian",
+                "Turkish",
+                "Tuvaluan",
+                "Ugandan",
+                "Ukrainian",
+                "Uruguayan",
+                "Uzbekistani",
+                "Venezuelan",
+                "Vietnamese",
+                "Welsh",
+                "Yemenite",
+                "Zambian",
+                "Zimbabwean"
+              ]
+            }
+          },
+          {
+            "name": "pickerCountry",
+            "type": "picker",
+            "payload": {
+              "label": "Country",
+              "options": [
+                "Afghanistan",
+                "Åland Islands",
+                "Albania",
+                "Algeria",
+                "American Samoa",
+                "AndorrA",
+                "Angola",
+                "Anguilla",
+                "Antarctica",
+                "Antigua and Barbuda",
+                "Argentina",
+                "Armenia",
+                "Aruba",
+                "Australia",
+                "Austria",
+                "Azerbaijan",
+                "Bahamas",
+                "Bahrain",
+                "Bangladesh",
+                "Barbados",
+                "Belarus",
+                "Belgium",
+                "Belize",
+                "Benin",
+                "Bermuda",
+                "Bhutan",
+                "Bolivia",
+                "Bosnia and Herzegovina",
+                "Botswana",
+                "Bouvet Island",
+                "Brazil",
+                "British Indian Ocean Territory",
+                "Brunei Darussalam",
+                "Bulgaria",
+                "Burkina Faso",
+                "Burundi",
+                "Cambodia",
+                "Cameroon",
+                "Canada",
+                "Cape Verde",
+                "Cayman Islands",
+                "Central African Republic",
+                "Chad",
+                "Chile",
+                "China",
+                "Christmas Island",
+                "Cocos (Keeling) Islands",
+                "Colombia",
+                "Comoros",
+                "Congo",
+                "Congo, The Democratic Republic of the",
+                "Cook Islands",
+                "Costa Rica",
+                "Cote D\"Ivoire",
+                "Croatia",
+                "Cuba",
+                "Cyprus",
+                "Czech Republic",
+                "Denmark",
+                "Djibouti",
+                "Dominica",
+                "Dominican Republic",
+                "Ecuador",
+                "Egypt",
+                "El Salvador",
+                "Equatorial Guinea",
+                "Eritrea",
+                "Estonia",
+                "Ethiopia",
+                "Falkland Islands (Malvinas)",
+                "Faroe Islands",
+                "Fiji",
+                "Finland",
+                "France",
+                "French Guiana",
+                "French Polynesia",
+                "French Southern Territories",
+                "Gabon",
+                "Gambia",
+                "Georgia",
+                "Germany",
+                "Ghana",
+                "Gibraltar",
+                "Greece",
+                "Greenland",
+                "Grenada",
+                "Guadeloupe",
+                "Guam",
+                "Guatemala",
+                "Guernsey",
+                "Guinea",
+                "Guinea-Bissau",
+                "Guyana",
+                "Haiti",
+                "Heard Island and Mcdonald Islands",
+                "Holy See (Vatican City State)",
+                "Honduras",
+                "Hong Kong",
+                "Hungary",
+                "Iceland",
+                "India",
+                "Indonesia",
+                "Iran, Islamic Republic Of",
+                "Iraq",
+                "Ireland",
+                "Isle of Man",
+                "Israel",
+                "Italy",
+                "Jamaica",
+                "Japan",
+                "Jersey",
+                "Jordan",
+                "Kazakhstan",
+                "Kenya",
+                "Kiribati",
+                "Korea, Democratic People\"SRepublicof",
+                "Korea,Republicof",
+                "Kuwait",
+                "Kyrgyzstan",
+                "Lao People\"SDemocraticRepublic",
+                "Latvia",
+                "Lebanon",
+                "Lesotho",
+                "Liberia",
+                "Libyan Arab Jamahiriya",
+                "Liechtenstein",
+                "Lithuania",
+                "Luxembourg",
+                "Macao",
+                "Macedonia, The Former Yugoslav Republic of",
+                "Madagascar",
+                "Malawi",
+                "Malaysia",
+                "Maldives",
+                "Mali",
+                "Malta",
+                "Marshall Islands",
+                "Martinique",
+                "Mauritania",
+                "Mauritius",
+                "Mayotte",
+                "Mexico",
+                "Micronesia, Federated States of",
+                "Moldova, Republic of",
+                "Monaco",
+                "Mongolia",
+                "Montserrat",
+                "Morocco",
+                "Mozambique",
+                "Myanmar",
+                "Namibia",
+                "Nauru",
+                "Nepal",
+                "Netherlands",
+                "Netherlands Antilles",
+                "New Caledonia",
+                "New Zealand",
+                "Nicaragua",
+                "Niger",
+                "Nigeria",
+                "Niue",
+                "Norfolk Island",
+                "Northern Mariana Islands",
+                "Norway",
+                "Oman",
+                "Pakistan",
+                "Palau",
+                "Palestinian Territory, Occupied",
+                "Panama",
+                "Papua New Guinea",
+                "Paraguay",
+                "Peru",
+                "Philippines",
+                "Pitcairn",
+                "Poland",
+                "Portugal",
+                "Puerto Rico",
+                "Qatar",
+                "Reunion",
+                "Romania",
+                "Russian Federation",
+                "RWANDA",
+                "Saint Helena",
+                "Saint Kitts and Nevis",
+                "Saint Lucia",
+                "Saint Pierre and Miquelon",
+                "Saint Vincent and the Grenadines",
+                "Samoa",
+                "San Marino",
+                "Sao Tome and Principe",
+                "Saudi Arabia",
+                "Senegal",
+                "Serbia and Montenegro",
+                "Seychelles",
+                "Sierra Leone",
+                "Singapore",
+                "Slovakia",
+                "Slovenia",
+                "Solomon Islands",
+                "Somalia",
+                "South Africa",
+                "South Georgia and the South Sandwich Islands",
+                "Spain",
+                "Sri Lanka",
+                "Sudan",
+                "Suriname",
+                "Svalbard and Jan Mayen",
+                "Swaziland",
+                "Sweden",
+                "Switzerland",
+                "Syrian Arab Republic",
+                "Taiwan, Province of China",
+                "Tajikistan",
+                "Tanzania, United Republic of",
+                "Thailand",
+                "Timor-Leste",
+                "Togo",
+                "Tokelau",
+                "Tonga",
+                "Trinidad and Tobago",
+                "Tunisia",
+                "Turkey",
+                "Turkmenistan",
+                "Turks and Caicos Islands",
+                "Tuvalu",
+                "Uganda",
+                "Ukraine",
+                "United Arab Emirates",
+                "United Kingdom",
+                "United States",
+                "United States Minor Outlying Islands",
+                "Uruguay",
+                "Uzbekistan",
+                "Vanuatu",
+                "Venezuela",
+                "Viet Nam",
+                "Virgin Islands, British",
+                "Virgin Islands, U.S.",
+                "Wallis and Futuna",
+                "Western Sahara",
+                "Yemen",
+                "Zambia",
+                "Zimbabwe"
+              ]
+            }
+          },
+          {
+            "name": "pickerMaritalStatus",
+            "type": "picker",
+            "payload": {
+              "label": "Marital Status",
+              "options": [
+                "Single",
+                "Married",
+                "Divorced",
+                "Widow"
+              ]
+            }
+          },
+          {
+            "name": "txtStreet",
+            "type": "textfield",
+            "payload": {
+              "label": "Street Address",
+              "placeholder": "Your street address"
+            }
+          },
+          {
+            "name": "txtCity",
+            "type": "textfield",
+            "payload": {
+              "label": "City",
+              "placeholder": "city..."
+            }
+          },
+        ]
       },
-      {
-        "name": "bussinessTypePicker2",
-        "type": "picker",
-        "payload": {
-          "label": "Type of Business",
-          "options": [
-            "Agriculture",
-            "Minning",
-            "Financial",
-            "Utilities",
-            "Transportation",
-            "Services",
-            "Retailers",
-            "Real Estate",
-            "Macufacturing"
-          ]
-        }
+      "page2": {
+        "title": "Employment Status",
+        "fields": [
+          {
+            "name": "employmentDetail",
+            "type": "input-group",
+            "payload": {
+              "title": "Employment Detail",
+              "subTitle": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,",
+              "forms": [
+                {
+                  "name": "bussinessTypePicker",
+                  "type": "picker",
+                  "payload": {
+                    "label": "Type of Business",
+                    "options": [
+                      "Agriculture",
+                      "Minning",
+                      "Financial"
+                    ]
+                  }
+                },
+                {
+                  "name": "txtName2",
+                  "type": "textfield",
+                  "payload": {
+                    "label": "Name",
+                    "placeholder": "your name"
+                  }
+                },
+                {
+                  "name": "txtEmail",
+                  "type": "textfield",
+                  "payload": {
+                    "label": "Email",
+                    "placeholder": "email address"
+                  }
+                },
+                {
+                  "name": "mc4",
+                  "type": "multiple-choice",
+                  "payload": {
+                    "question": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium ?",
+                    "options": [
+                      "cat",
+                      "dog",
+                      "pug",
+                      "tiger",
+                      "fish"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "bussinessTypePicker2",
+            "type": "picker",
+            "payload": {
+              "label": "Type of Business",
+              "options": [
+                "Agriculture",
+                "Minning",
+                "Financial",
+                "Utilities",
+                "Transportation",
+                "Services",
+                "Retailers",
+                "Real Estate",
+                "Macufacturing"
+              ]
+            }
+          },
+          {
+            "name": "ch1",
+            "type": "choice",
+            "payload": {
+              "question": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, ",
+              "options": [
+                "Yes",
+                "No"
+              ]
+            }
+          },
+          {
+            "name": "txtInfo",
+            "type": "textfield",
+            "payload": {
+              "label": "Your infomation description",
+              "placeholder": "info..."
+            }
+          },
+          {
+            "name": "mc5",
+            "type": "multiple-choice",
+            "payload": {
+              "question": "Blanditiis praesentium ?",
+              "options": [
+                "A",
+                "B",
+                "C",
+              ]
+            }
+          },
+          {
+            "name": "txtName3",
+            "type": "textfield",
+            "payload": {
+              "label": "Name",
+              "placeholder": "your name"
+            }
+          },
+          {
+            "name": "txtEmail2",
+            "type": "textfield",
+            "payload": {
+              "label": "Email",
+              "placeholder": "email address"
+            }
+          }
+        ]
       },
-      {
-        "name": "ch1",
-        "type": "choice",
-        "payload": {
-          "question": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, ",
-          "options": [
-            "Yes",
-            "No"
-          ]
-        }
-      },
-      {
-        "name": "txtInfo",
-        "type": "textfield",
-        "payload": {
-          "label": "Your infomation description",
-          "placeholder": "info..."
-        }
-      },
-      {
-        "name": "genderPicker",
-        "type": "picker",
-        "payload": {
-          "label": "Gender",
-          "options": [
-            "Male",
-            "Female"
-          ]
-        }
-      },
-      {
-        "name": "mc5",
-        "type": "multiple-choice",
-        "payload": {
-          "question": "Blanditiis praesentium ?",
-          "options": [
-            "A",
-            "B",
-            "C",
-          ]
-        }
-      },
-      {
-        "name": "txtName3",
-        "type": "textfield",
-        "payload": {
-          "label": "Name",
-          "placeholder": "your name"
-        }
-      },
-      {
-        "name": "txtEmail2",
-        "type": "textfield",
-        "payload": {
-          "label": "Email",
-          "placeholder": "email address"
-        }
+      "page3": {
+        "title": "Investment Profile",
+        "fields": [
+          {
+            "name": "mc1",
+            "type": "multiple-choice",
+            "payload": {
+              "question": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium ?",
+              "options": [
+                "cat",
+                "dog",
+                "pug",
+                "tiger",
+                "fish"
+              ]
+            }
+          },
+          {
+            "name": "mc2",
+            "type": "multiple-choice",
+            "payload": {
+              "question": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium ?",
+              "options": [
+                "cat1",
+                "dog2",
+                "pug3",
+                "tiger4",
+                "fish5"
+              ]
+            }
+          },
+          {
+            "name": "mc3",
+            "type": "multiple-choice",
+            "payload": {
+              "question": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium ?",
+              "options": [
+                "cat11",
+                "dog22",
+                "pug33",
+                "tiger44",
+                "fish55"
+              ]
+            }
+          }
+        ]
       }
-    ]
-  },
-  "page3": {
-    "title": "Investment Profile",
-    "fields": [
-      {
-        "name": "mc1",
-        "type": "multiple-choice",
-        "payload": {
-          "question": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium ?",
-          "options": [
-            "cat",
-            "dog",
-            "pug",
-            "tiger",
-            "fish"
-          ]
-        }
-      },
-      {
-        "name": "mc2",
-        "type": "multiple-choice",
-        "payload": {
-          "question": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium ?",
-          "options": [
-            "cat1",
-            "dog2",
-            "pug3",
-            "tiger4",
-            "fish5"
-          ]
-        }
-      },
-      {
-        "name": "mc3",
-        "type": "multiple-choice",
-        "payload": {
-          "question": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium ?",
-          "options": [
-            "cat11",
-            "dog22",
-            "pug33",
-            "tiger44",
-            "fish55"
-          ]
-        }
-      }
-    ]
-  }
-}
+    }
