@@ -19,6 +19,13 @@
         }
       },
       {
+        "name": "pickerBirthDate",
+        "type": "date-picker",
+        "payload": {
+          "label": "Birthdate"
+        }
+      },
+      {
         "name": "txtStreet",
         "type": "textfield",
         "payload": {

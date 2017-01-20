@@ -18,7 +18,7 @@ class TextField extends Component {
   render() {
     let formPayload = this.props.payload
     return (
-      <View style={styles.container}>
+      <View style={styles.container}>   
         <View>
           <Text style={{color: '#212121', fontSize: 15, fontWeight: '500'}}>
             {formPayload.label}
@@ -26,7 +26,7 @@ class TextField extends Component {
           <InputGroup borderType='underline'>
             <Input placeholder={formPayload.placeholder} onChangeText={ (text)=> this.setState({formName: this.props.name, formType: this.props.type, formQuestion: formPayload.label, formAnswer: text}) } />
           </InputGroup>
-        </View>
+        </View>    
       </View>
     )
   }

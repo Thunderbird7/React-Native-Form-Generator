@@ -4,6 +4,7 @@ import MultipleChoice from './components/formInput/MultipleChoice'
 import TextField from './components/formInput/Textfield'
 import Picker from './components/formInput/Picker'
 import InputGroup from './components/formInput/InputGroup'
+import DatePicker from './components/formInput/DatePicker'
 
 export default formGeneratorComponents = (data) => {
   let components = []
@@ -40,6 +41,15 @@ export default formGeneratorComponents = (data) => {
       case 'picker':
         components.push(
           <Picker
+            key={i}
+            id={i}
+            type={input.type}
+            name={input.name}
+            payload={input.payload} />)
+        break
+      case 'date-picker':
+        components.push(
+          <DatePicker
             key={i}
             id={i}
             type={input.type}
