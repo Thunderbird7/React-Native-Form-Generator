@@ -6,7 +6,7 @@
         "name": "txtName",
         "type": "textfield",
         "payload": {
-          "label": "Name",
+          "label": "First Name",
           "placeholder": "your name"
         }
       },
