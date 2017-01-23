@@ -6,7 +6,7 @@
             "name": "txtName",
             "type": "textfield",
             "payload": {
-              "label": "Name",
+              "label": "First Name",
               "placeholder": "Your name"
             }
           },
@@ -41,12 +41,7 @@
             "name": "pickerDateOfBirth",
             "type": "date-picker",
             "payload": {
-              "label": "Date of Birth",
-              "options": [
-                "A",
-                "B",
-                "C"
-              ]
+              "label": "Date of Birth"
             }
           },
           {
@@ -258,11 +253,10 @@
               "label": "Country",
               "options": [
                 "Afghanistan",
-                "Åland Islands",
                 "Albania",
                 "Algeria",
                 "American Samoa",
-                "AndorrA",
+                "Andorra",
                 "Angola",
                 "Anguilla",
                 "Antarctica",
@@ -289,7 +283,7 @@
                 "Bouvet Island",
                 "Brazil",
                 "British Indian Ocean Territory",
-                "Brunei Darussalam",
+                "Brunei",
                 "Bulgaria",
                 "Burkina Faso",
                 "Burundi",
@@ -310,7 +304,7 @@
                 "Congo, The Democratic Republic of the",
                 "Cook Islands",
                 "Costa Rica",
-                "Cote D\"Ivoire",
+                "Ivory Coast",
                 "Croatia",
                 "Cuba",
                 "Cyprus",
@@ -319,21 +313,23 @@
                 "Djibouti",
                 "Dominica",
                 "Dominican Republic",
+                "East Timor",
                 "Ecuador",
                 "Egypt",
+                "England",
                 "El Salvador",
                 "Equatorial Guinea",
                 "Eritrea",
                 "Estonia",
                 "Ethiopia",
-                "Falkland Islands (Malvinas)",
+                "Falkland Islands",
                 "Faroe Islands",
-                "Fiji",
+                "Fiji Islands",
                 "Finland",
                 "France",
                 "French Guiana",
                 "French Polynesia",
-                "French Southern Territories",
+                "French Southern territories",
                 "Gabon",
                 "Gambia",
                 "Georgia",
@@ -346,12 +342,11 @@
                 "Guadeloupe",
                 "Guam",
                 "Guatemala",
-                "Guernsey",
                 "Guinea",
                 "Guinea-Bissau",
                 "Guyana",
                 "Haiti",
-                "Heard Island and Mcdonald Islands",
+                "Heard Island and McDonald Islands",
                 "Holy See (Vatican City State)",
                 "Honduras",
                 "Hong Kong",
@@ -359,24 +354,20 @@
                 "Iceland",
                 "India",
                 "Indonesia",
-                "Iran, Islamic Republic Of",
+                "Iran",
                 "Iraq",
                 "Ireland",
-                "Isle of Man",
                 "Israel",
                 "Italy",
                 "Jamaica",
                 "Japan",
-                "Jersey",
                 "Jordan",
-                "Kazakhstan",
+                "Kazakstan",
                 "Kenya",
                 "Kiribati",
-                "Korea, Democratic People\"SRepublicof",
-                "Korea,Republicof",
                 "Kuwait",
                 "Kyrgyzstan",
-                "Lao People\"SDemocraticRepublic",
+                "Laos",
                 "Latvia",
                 "Lebanon",
                 "Lesotho",
@@ -386,7 +377,7 @@
                 "Lithuania",
                 "Luxembourg",
                 "Macao",
-                "Macedonia, The Former Yugoslav Republic of",
+                "Macedonia",
                 "Madagascar",
                 "Malawi",
                 "Malaysia",
@@ -400,7 +391,7 @@
                 "Mayotte",
                 "Mexico",
                 "Micronesia, Federated States of",
-                "Moldova, Republic of",
+                "Moldova",
                 "Monaco",
                 "Mongolia",
                 "Montserrat",
@@ -419,12 +410,14 @@
                 "Nigeria",
                 "Niue",
                 "Norfolk Island",
+                "North Korea",
+                "Northern Ireland",
                 "Northern Mariana Islands",
                 "Norway",
                 "Oman",
                 "Pakistan",
                 "Palau",
-                "Palestinian Territory, Occupied",
+                "Palestine",
                 "Panama",
                 "Papua New Guinea",
                 "Paraguay",
@@ -438,7 +431,7 @@
                 "Reunion",
                 "Romania",
                 "Russian Federation",
-                "RWANDA",
+                "Rwanda",
                 "Saint Helena",
                 "Saint Kitts and Nevis",
                 "Saint Lucia",
@@ -448,8 +441,8 @@
                 "San Marino",
                 "Sao Tome and Principe",
                 "Saudi Arabia",
+                "Scotland",
                 "Senegal",
-                "Serbia and Montenegro",
                 "Seychelles",
                 "Sierra Leone",
                 "Singapore",
@@ -459,20 +452,20 @@
                 "Somalia",
                 "South Africa",
                 "South Georgia and the South Sandwich Islands",
+                "South Korea",
+                "South Sudan",
                 "Spain",
-                "Sri Lanka",
+                "SriLanka",
                 "Sudan",
                 "Suriname",
                 "Svalbard and Jan Mayen",
                 "Swaziland",
                 "Sweden",
                 "Switzerland",
-                "Syrian Arab Republic",
-                "Taiwan, Province of China",
+                "Syria",
                 "Tajikistan",
-                "Tanzania, United Republic of",
+                "Tanzania",
                 "Thailand",
-                "Timor-Leste",
                 "Togo",
                 "Tokelau",
                 "Tonga",
@@ -492,12 +485,14 @@
                 "Uzbekistan",
                 "Vanuatu",
                 "Venezuela",
-                "Viet Nam",
+                "Vietnam",
                 "Virgin Islands, British",
                 "Virgin Islands, U.S.",
+                "Wales",
                 "Wallis and Futuna",
                 "Western Sahara",
                 "Yemen",
+                "Yugoslavia",
                 "Zambia",
                 "Zimbabwe"
               ]
@@ -529,175 +524,184 @@
             "type": "textfield",
             "payload": {
               "label": "City",
-              "placeholder": "city..."
+              "placeholder": "Your city"
             }
           },
+          {
+            "name": "txtState",
+            "type": "textfield",
+            "payload": {
+              "label": "State/Province/Region",
+              "placeholder": "State"
+            }
+          },
+          {
+            "name": "txtZipCode",
+            "type": "textfield",
+            "payload": {
+              "label": "Zip Code",
+              "placeholder": "Your zip code"
+            }
+          },
+          {
+            "name": "txtPhoneNumber",
+            "type": "textfield",
+            "payload": {
+              "label": "Phone Number",
+              "placeholder": "Your phone number"
+            }
+          }
         ]
       },
       "page2": {
         "title": "Employment Status",
         "fields": [
           {
-            "name": "employmentDetail",
-            "type": "input-group",
-            "payload": {
-              "title": "Employment Detail",
-              "subTitle": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,",
-              "forms": [
-                {
-                  "name": "bussinessTypePicker",
-                  "type": "picker",
-                  "payload": {
-                    "label": "Type of Business",
-                    "options": [
-                      "Agriculture",
-                      "Minning",
-                      "Financial"
-                    ]
-                  }
-                },
-                {
-                  "name": "txtName2",
-                  "type": "textfield",
-                  "payload": {
-                    "label": "Name",
-                    "placeholder": "your name"
-                  }
-                },
-                {
-                  "name": "txtEmail",
-                  "type": "textfield",
-                  "payload": {
-                    "label": "Email",
-                    "placeholder": "email address"
-                  }
-                },
-                {
-                  "name": "mc4",
-                  "type": "multiple-choice",
-                  "payload": {
-                    "question": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium ?",
-                    "options": [
-                      "cat",
-                      "dog",
-                      "pug",
-                      "tiger",
-                      "fish"
-                    ]
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "name": "bussinessTypePicker2",
+            "name": "pickerOccupation",
             "type": "picker",
             "payload": {
-              "label": "Type of Business",
+              "label": "Occupation",
               "options": [
-                "Agriculture",
-                "Minning",
-                "Financial",
-                "Utilities",
-                "Transportation",
-                "Services",
-                "Retailers",
-                "Real Estate",
-                "Macufacturing"
+                "Corporate Employee",
+                "Government officer",
+                "Politician",
+                "State Enterprise Employee",
+                "Entrepreneur",
+                "Freelance",
+                "Unemployment",
+                "Retirement",
+                "Other"
               ]
             }
           },
           {
-            "name": "ch1",
-            "type": "choice",
-            "payload": {
-              "question": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, ",
-              "options": [
-                "Yes",
-                "No"
-              ]
-            }
-          },
-          {
-            "name": "txtInfo",
+            "name": "txtCompanyName",
             "type": "textfield",
             "payload": {
-              "label": "Your infomation description",
-              "placeholder": "info..."
+              "label": "Company's Name",
+              "placeholder": "Your company name"
             }
           },
           {
-            "name": "mc5",
-            "type": "multiple-choice",
-            "payload": {
-              "question": "Blanditiis praesentium ?",
-              "options": [
-                "A",
-                "B",
-                "C",
-              ]
-            }
-          },
-          {
-            "name": "txtName3",
+            "name": "txtStreet",
             "type": "textfield",
             "payload": {
-              "label": "Name",
-              "placeholder": "your name"
+              "label": "Office's Street Address",
+              "placeholder": "Your street address"
             }
           },
           {
-            "name": "txtEmail2",
+            "name": "txtCity",
+            "type": "textfield",
+            "payload": {
+              "label": "City",
+              "placeholder": "Your city"
+            }
+          },
+          {
+            "name": "txtState",
+            "type": "textfield",
+            "payload": {
+              "label": "State/Province/Region",
+              "placeholder": "State"
+            }
+          },
+          {
+            "name": "txtZipCode",
+            "type": "textfield",
+            "payload": {
+              "label": "Zip Code",
+              "placeholder": "Your zip code"
+            }
+          },
+          {
+            "name": "txtPhoneNumber",
+            "type": "textfield",
+            "payload": {
+              "label": "Phone Number",
+              "placeholder": "Your phone number"
+            }
+          },
+          {
+            "name": "txtEmail",
             "type": "textfield",
             "payload": {
               "label": "Email",
               "placeholder": "email address"
             }
+          },
+          {
+            "name": "pickerIncome",
+            "type": "picker",
+            "payload": {
+              "label": "Hosehold Income per month (Baht)",
+              "options": [
+                "50,000 Baht and lower",
+                "50,001–100,000 Baht",
+                "100,001–300,000 Baht",
+                "300,001–500,000 Baht",
+                "500,001–1,000,000 Baht",
+                "1,000,001 Baht and up"
+              ]
+            }
           }
         ]
       },
       "page3": {
-        "title": "Investment Profile",
+        "title": "Additional Information",
         "fields": [
           {
-            "name": "mc1",
-            "type": "multiple-choice",
+            "name": "c1",
+            "type": "choice",
             "payload": {
-              "question": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium ?",
+              "question": "I have an relationship with USA.",
               "options": [
-                "cat",
-                "dog",
-                "pug",
-                "tiger",
-                "fish"
+                "No",
+                "Yes"
               ]
             }
           },
           {
-            "name": "mc2",
-            "type": "multiple-choice",
+            "name": "c2",
+            "type": "choice",
             "payload": {
-              "question": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium ?",
+              "question": "I am a politician or associate with politician.",
               "options": [
-                "cat1",
-                "dog2",
-                "pug3",
-                "tiger4",
-                "fish5"
+                "No",
+                "Yes"
               ]
             }
           },
           {
-            "name": "mc3",
-            "type": "multiple-choice",
+            "name": "c3",
+            "type": "choice",
             "payload": {
-              "question": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium ?",
+              "question": "I am a politician or associate with politician.",
               "options": [
-                "cat11",
-                "dog22",
-                "pug33",
-                "tiger44",
-                "fish55"
+                "No",
+                "Yes"
+              ]
+            }
+          },
+          {
+            "name": "c4",
+            "type": "choice",
+            "payload": {
+              "question": "Have you ever been Fined or charged under the Additional information Anti-Money Laundering Office (AMLO) Act?",
+              "options": [
+                "No",
+                "Yes"
+              ]
+            }
+          },
+          {
+            "name": "c5",
+            "type": "choice",
+            "payload": {
+              "question": "I have a history of breaking Money laundering laws. If yes, please provide detail",
+              "options": [
+                "No",
+                "Yes"
               ]
             }
           }
