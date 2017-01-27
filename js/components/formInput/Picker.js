@@ -4,69 +4,66 @@ import React, { Component } from 'react'
 import {
   View,
   Text,
+  Image,
   StyleSheet,
+  TouchableOpacity
 } from 'react-native'
-import { Header, Title, Button, InputGroup, Input, Content, Picker, List, ListItem } from 'native-base'
-import { Grid, Col, Row } from 'react-native-easy-grid'
+import { Header, Title, Button, Picker, } from 'native-base'
 
 const Item = Picker.Item
 
-class Dropdown extends Component {
+const styles = StyleSheet.create({
+  wrapper: {
+    height: 48,
+    borderBottomColor: 'rgb(212, 220, 230)',
+    borderBottomWidth: 1,
+  },
+  label: {
+    color: 'rgb(161, 176, 195)',
+    fontSize: 14,
+    fontWeight: '500',
+  },
+  picker: {
+    top: -4,
+    left: -8,
+    width: 400,
+    justifyContent: 'flex-start',
+  },
+  pickerContainer: {
+    flexDirection: 'row',
+  },
+  rightChavron: {
+    alignItems: 'flex-end',
+    justifyContent: 'center',
+  },
+  chavronIcon: {
+    right: 5,
+    justifyContent: 'flex-start',
+  },
+})
 
-  state = {
-    formName: `${this.props.name}`,
-    formType: `${this.props.type}`,
-    formQuestion: `${this.props.payload.label}`,
-    formAnswer: `${this.props.payload.options[1]}`,
-    selectedValue: `${this.props.payload.options[1]}`,
-  }
-
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
-    let formPayload = this.props.payload
-    return (
-      <View style={styles.container}>
-          <List>
-              <ListItem itemDivider style={{left: -5, margin: 5, backgroundColor: 'transparent'}}>
-                <Text style={{left: -12, color: '#212121', fontSize: 15, fontWeight: '500', color: '#212121'}}>
-                  {formPayload.label}
-                </Text>
-                <Picker
-                  headerComponent={
-                      <Header>
-                          <Button transparent>
-                              Cancel
-                          </Button>
-                          <Title>{formPayload.label}</Title>
-                      </Header>
-                    }
-                    mode="dialog"
-                    selectedValue={this.state.selectedValue}
-                    onValueChange={this.onValueChange.bind(this)}>
-                    {formPayload.options.map((item, i) => <Item key={`${this.props.id}${i}`} label={item} value={`${item}`} />)}
-                </Picker>
-              </ListItem>
-          </List>
+const DropdownPicker = (props) => {
+  return (
+    <View style={styles.wrapper}>
+      <Text style={styles.label}>{props.label}</Text>
+      <View style={styles.pickerContainer}>
+        <Picker style={styles.picker} headerComponent={
+          <Header>
+            <Button transparent>Cancel</Button>
+            <Title>{props.label}</Title>
+          </Header>}
+          mode="dropdown"
+          {...props}>
+          {props.options.map((item, i) => <Item key={`${props.id}${i}`} label={item} value={`${item}`} />)}
+        </Picker>
+        <View style={styles.rightChavron}>
+          <Image source={require('../../../img/ic_back.png')}
+            resizeMode='center'
+            style={styles.chavronIcon} />
+        </View>
       </View>
-    );
-  }
-
-  onValueChange (value) {
-    this.setState({
-      selectedValue : value,
-      formAnswer: value
-    })
-  }
+    </View>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingBottom: 20
-  },
-});
-
-export default Dropdown
+export default DropdownPicker

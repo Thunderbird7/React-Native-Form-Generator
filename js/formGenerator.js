@@ -1,9 +1,7 @@
 import React, { component } from 'react'
-import Choice from './components/formInput/Choice'
-import MultipleChoice from './components/formInput/MultipleChoice'
-import TextField from './components/formInput/Textfield'
-import Picker from './components/formInput/Picker'
-import InputGroup from './components/formInput/InputGroup'
+import Checkbox from './containers/CheckboxWrapper'
+import TextField from './containers/TextFieldWrapper'
+import Picker from './containers/PickerWrapper'
 import DatePicker from './components/formInput/DatePicker'
 
 export default formGeneratorComponents = (data) => {
@@ -13,21 +11,13 @@ export default formGeneratorComponents = (data) => {
     switch (input.type) {
       case 'choice':
         components.push(
-          <Choice
+          <Checkbox
             key={i}
             id={i}
             type={input.type}
             name={input.name}
-            payload={input.payload} />)
-        break
-      case 'multiple-choice':
-        components.push(
-          <MultipleChoice
-            key={i}
-            id={i}
-            type={input.type}
-            name={input.name}
-            payload={input.payload} />)
+            label={input.label}
+            options={input.options} />)
         break
       case 'textfield':
         components.push(
@@ -36,7 +26,8 @@ export default formGeneratorComponents = (data) => {
             id={i}
             type={input.type}
             name={input.name}
-            payload={input.payload} />)
+            label={input.label}
+            placeholder={input.placeholder} />)
         break
       case 'picker':
         components.push(
@@ -45,20 +36,12 @@ export default formGeneratorComponents = (data) => {
             id={i}
             type={input.type}
             name={input.name}
-            payload={input.payload} />)
+            label={input.label}
+            options={input.options} />)
         break
       case 'date-picker':
         components.push(
           <DatePicker
-            key={i}
-            id={i}
-            type={input.type}
-            name={input.name}
-            payload={input.payload} />)
-        break
-      case 'input-group':
-        components.push(
-          <InputGroup
             key={i}
             id={i}
             type={input.type}

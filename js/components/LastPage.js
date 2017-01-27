@@ -6,7 +6,7 @@ import {
 } from 'react-native'
 import { Container, Content, Button, Header, Title, H1 } from 'native-base'
 import { Grid, Col, Row } from 'react-native-easy-grid'
-import { Actions } from 'react-native-router-flux'
+import { Actions, ActionConst } from 'react-native-router-flux'
 
 export default class LastPage extends Component {
   render(){
@@ -23,7 +23,7 @@ export default class LastPage extends Component {
           </Row>
           <Row size={1}>
             <Col style={{justifyContent: 'flex-end', alignItems: 'flex-end'}}>
-                <Button block danger onPress={()=> Actions.pop()}>Back</Button>
+                <Button block danger onPress={()=> Actions.welcome({ type: ActionConst.RESET })}>Play Again.</Button>
             </Col>
           </Row>
         </Grid>          

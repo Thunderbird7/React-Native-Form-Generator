@@ -33,23 +33,23 @@ export default class ApplicationForm extends Component {
     return (
       <View style={styles.container}>
         <Header>
-          <Button onPress={() => Actions.pop() } transparent>
+          <Button onPress={() => Actions.pop()} transparent>
             <Icon name="ios-arrow-back" />
           </Button>
           <Title>{jsonForm.title}</Title>
         </Header>
         <Grid>
           <Row size={8}>
-            <Content>
-              <View style={{margin: 20}}>
+            <Content style={{}}>
+              <View style={{ paddingLeft: 20, paddingRight: 20 }}>
                 {fields}
               </View>
             </Content>
           </Row>
           <Row size={1}>
-            <Col style={{justifyContent: 'flex-end', alignItems: 'flex-end'}}>
-                <Button block info onPress={()=> Actions.applicationForm({page: this.state.pageIndex + 1,})}>Next</Button>
-              
+            <Col style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }}>
+              <Button block info onPress={() => Actions.applicationForm({ page: this.state.pageIndex + 1, })}>Next</Button>
+
             </Col>
           </Row>
         </Grid>
@@ -61,6 +61,6 @@ export default class ApplicationForm extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
   }
 })

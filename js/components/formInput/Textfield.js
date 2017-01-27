@@ -1,42 +1,62 @@
-/* @flow */
-
 import React, { Component } from 'react'
 import {
   View,
   Text,
   StyleSheet,
-} from 'react-native'
-import { InputGroup, Input, Icon } from 'native-base'
-import { Grid, Col, Row } from 'react-native-easy-grid'
-
-class TextField extends Component {
-
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
-    let formPayload = this.props.payload
-    return (
-      <View style={styles.container}>   
-        <View>
-          <Text style={{color: '#212121', fontSize: 15, fontWeight: '500'}}>
-            {formPayload.label}
-          </Text>
-          <InputGroup borderType='underline'>
-            <Input placeholder={formPayload.placeholder} onChangeText={ (text)=> this.setState({formName: this.props.name, formType: this.props.type, formQuestion: formPayload.label, formAnswer: text}) } />
-          </InputGroup>
-        </View>    
-      </View>
-    )
-  }
-}
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
 
 const styles = StyleSheet.create({
-  container: {
+
+  wrapper: {
+    height: 48,
+    borderBottomColor: 'rgb(212, 220, 230)',
+    borderBottomWidth: 1,
+  },
+  label: {
+    color: 'rgb(161, 176, 195)',
+    fontSize: 14,
+    fontWeight: '500',
+  },
+  input: {
     flex: 1,
-    paddingBottom: 20
+    height: 40,
+    justifyContent: 'center',
+    color: 'rgb(35, 38, 61)',
+    fontSize: 16,
+    fontWeight: '500',
+  },
+  rightButton: {
+    position: 'absolute',
+    top: -30,
+    right: 0,
+  },
+  rightButtonText: {
+    textAlign: 'right',
+    width: 70,
+    color: 'rgb(0, 186, 228)',
+    fontSize: 16,
   },
 })
+
+const TextField = (props) => {
+  return (
+    <View style={styles.wrapper}>
+      <Text style={styles.label}>{props.label}</Text>
+      <TextInput {...props}
+        style={styles.input}
+        />
+      {props.showRightButton ?
+        <View style={{ marginRight: 5 }}>
+          <TouchableOpacity
+            {...props}
+            style={styles.rightButton}>
+            <Text style={styles.rightButtonText}>{props.rightButtonTitle}</Text>
+          </TouchableOpacity>
+        </View> : null}
+    </View>
+  )
+}
 
 export default TextField

@@ -3,11 +3,11 @@ import {
   View,
   Text,
   Modal,
+  Image,
   StyleSheet,
   DatePickerIOS,
   TouchableOpacity,
 } from 'react-native'
-import { Header, Title, Button, InputGroup, Input, Content, Picker, List, ListItem } from 'native-base'
 import { Grid, Col, Row } from 'react-native-easy-grid'
 import moment from 'moment'
 
@@ -32,19 +32,19 @@ class DatePicker extends Component {
     let formPayload = this.props.payload
 
     return (
-      <View style={styles.containter}>
-        <List>
-          <ListItem itemDivider style={{ left: -5, margin: 5, backgroundColor: 'transparent' }}>
-            <Text style={{ left: -12, color: '#212121', fontSize: 15, fontWeight: '500', color: '#212121' }}>
-              {formPayload.label}
-            </Text>
-            <View style={{ justifyContent: 'center', flex: 1 }}>
-              <TouchableOpacity onPress={() => this.setState({ pickerVisible: true })} style={{ alignItems: 'flex-end' }}>
-                <Text style={{ fontSize: 17, color: 'dimgray' }}>{this.state.pickerLabel}</Text>
-              </TouchableOpacity>
-            </View>
-          </ListItem>
-        </List>
+      <View style={styles.wrapper}>
+        <Text style={styles.label}>{formPayload.label}</Text>
+        <View style={styles.pickerContainer}>
+          <TouchableOpacity style={styles.picker}
+            onPress={() => this.setState({ pickerVisible: true })}>
+            <Text style={styles.pickerLabel}>{this.state.pickerLabel}</Text>
+          </TouchableOpacity>
+          <View style={styles.rightChavron}>
+            <Image source={require('../../../img/ic_back.png')}
+              resizeMode='center'
+              style={styles.chavronIcon} />
+          </View>
+        </View>
         <Modal
           animationType={"fade"}
           transparent={true}
@@ -64,7 +64,7 @@ class DatePicker extends Component {
                     </TouchableOpacity>
                   </Col>
                   <Col>
-                    <TouchableOpacity onPress={() => this.setState({ pickerLabel: moment(this.state.date).format("MMM DD YYYY"), pickerVisible: false })} style={styles.pickerButton}>
+                    <TouchableOpacity onPress={() => this.setState({ pickerLabel: moment(this.state.date).format("DD MMMM YYYY"), pickerVisible: false })} style={styles.pickerButton}>
                       <Text style={styles.okButtonLabel}>OK</Text>
                     </TouchableOpacity>
                   </Col>
@@ -79,8 +79,35 @@ class DatePicker extends Component {
 }
 
 const styles = StyleSheet.create({
-  containter: {
-    flex: 1
+  wrapper: {
+    marginTop: 16,
+    height: 48,
+    borderBottomColor: 'rgb(212, 220, 230)',
+    borderBottomWidth: 1,
+  },
+  label: {
+    color: 'rgb(161, 176, 195)',
+    fontSize: 14,
+    fontWeight: '500',
+  },
+  picker: {
+    flex: 1,
+    justifyContent: 'flex-start',
+
+  },
+  pickerLabel: {
+    top: 4,
+    fontSize: 16,
+  },
+  pickerContainer: {
+    flexDirection: 'row',
+  },
+  rightChavron: {
+    top: 4,
+    justifyContent: 'flex-end',
+  },
+  chavronIcon: {
+    right: 5,
   },
   modal: {
     flex: 1,
